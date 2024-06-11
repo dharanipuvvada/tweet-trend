@@ -2,6 +2,7 @@ def registry = 'https://valaxy1001.jfrog.io/'
 def imageName = 'valaxy1512<dharanipuvvada@gmail.com>.jfrog.io/valaxy-docker-local/ttrend'
 def version   = '2.1.2'
 
+
 pipeline {
     agent {
         node {
@@ -72,13 +73,6 @@ stage("Jar Publish") {
             }
         }
     }
-    stage(" Deploy ") {
-       steps {
-         script {
-            sh './deploy.sh'
-         }
-       }
-     }
 
 
 }
